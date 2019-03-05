@@ -12,7 +12,7 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    composite:
+    product:
       url: http://localhost:8081
 
 server:

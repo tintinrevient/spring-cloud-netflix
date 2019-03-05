@@ -1,0 +1,33 @@
+info:
+  component: Zuul Server
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    composite:
+      url: http://localhost:8081
+
+server:
+  port: 8765
+
+spring:
+  application:
+    name: zuul-server
+
+#Ribbon is auto integrated with Zuul and for this exercise we are not using that.
+ribbon:
+  eureka:
+    enabled: false
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

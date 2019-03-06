@@ -1,5 +1,6 @@
 server:
-  port: 8081
+  address: localhost
+  port: 8086
 
 spring:
   application:
@@ -13,8 +14,6 @@ eureka:
 # the eureka client will send heart beats every 10 seconds, default is 30 seconds
   instance:
     leaseRenewalIntervalInSeconds: 10
-
-# An Eureka instance is indentified by eureka.instance.instanceId
-# if not used eureka.instance.metadataMap.instanceId will be it should be unique
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
+    preferIpAddress: true
+    ipAddress: ${server.address}
+    instanceId: ${server.address}:${server.port}

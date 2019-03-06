@@ -12,8 +12,8 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    product:
-      url: http://localhost:8081
+    data:
+      url: http://localhost:8080
 
 server:
   port: 8765

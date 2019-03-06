@@ -1,9 +1,29 @@
 server:
+  address: localhost
   port: 8080
 
 spring:
   application:
     name: data-service
+
+ribbon:
+  eureka:
+    enabled: true
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
 
 #we tell the Eureka Client the sever url
 eureka:
@@ -13,8 +33,6 @@ eureka:
 # the eureka client will send heart beats every 10 seconds, default is 30 seconds
   instance:
     leaseRenewalIntervalInSeconds: 10
-
-# An Eureka instance is indentified by eureka.instance.instanceId
-# if not used eureka.instance.metadataMap.instanceId will be it should be unique
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}:${random.value}}
+    preferIpAddress: true
+    ipAddress: ${server.address}
+    instanceId: ${server.address}:${server.port}

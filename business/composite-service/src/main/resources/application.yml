@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: data-service
+    name: composite-service
 
 #we tell the Eureka Client the sever url
 eureka:

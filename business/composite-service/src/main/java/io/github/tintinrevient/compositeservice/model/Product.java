@@ -1,4 +1,4 @@
-package io.github.tintinrevient.dataservice.model;
+package io.github.tintinrevient.compositeservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

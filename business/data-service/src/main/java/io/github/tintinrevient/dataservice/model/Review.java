@@ -9,10 +9,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Product {
+public class Review {
 
     private int id;
-    private String name;
-    private String description;
-
+    private String author;
+    private String subject;
+    private String comment;
+    private int product;
 }

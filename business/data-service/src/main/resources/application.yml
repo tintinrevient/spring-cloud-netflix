@@ -10,14 +10,6 @@ ribbon:
   eureka:
     enabled: true
 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-
 feign:
   client:
     config:
@@ -30,6 +22,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
 # the eureka client will send heart beats every 10 seconds, default is 30 seconds
   instance:
     leaseRenewalIntervalInSeconds: 10

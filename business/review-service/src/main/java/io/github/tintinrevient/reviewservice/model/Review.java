@@ -4,8 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -17,11 +17,11 @@ import lombok.ToString;
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private int id;
 
     private String author;
     private String subject;
     private String comment;
 
-    private Long product;
+    private int product;
 }

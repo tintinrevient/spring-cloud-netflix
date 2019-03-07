@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
+@EnableHystrix
 @EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
 @EnableEurekaClient
 @EnableFeignClients

@@ -3,16 +3,16 @@ package io.github.tintinrevient.dataservice.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import io.github.tintinrevient.dataservice.model.Recommendation;
-import org.springframework.hateoas.Resources;
 import org.springframework.web.bind.annotation.RequestParam;
+import java.util.List;
 
 @FeignClient("recommendation-service")
 public interface RecommendationClient {
 
     @RequestMapping(value = "/recommendation")
-    Resources<Recommendation> getAllRecommendations();
+    List<Recommendation> getAllRecommendations();
 
     @RequestMapping(value = "/recommendation/search/findByProduct")
-    Resources<Recommendation> getRecommendationsByProduct(@RequestParam("product") int product);
+    List<Recommendation> getRecommendationsByProduct(@RequestParam("product") int product);
 
 }

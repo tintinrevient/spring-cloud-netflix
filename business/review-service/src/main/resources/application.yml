@@ -6,7 +6,7 @@ spring:
   application:
     name: review-service
 
-#we tell the Eureka Client the sever url
+#we tell the Eureka Client the server url
 eureka:
   client:
     serviceUrl:

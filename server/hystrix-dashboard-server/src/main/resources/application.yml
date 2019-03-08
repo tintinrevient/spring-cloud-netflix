@@ -2,20 +2,9 @@ spring:
   application:
     name: hystrix-dashboard-server
 
-info:
-  component: Hystrix Dashboard
-
 server:
   address: localhost
   port: 7979
-
-PREFIX:
-
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
 
 #we tell the Eureka Client the server url
 eureka:

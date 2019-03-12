@@ -28,7 +28,7 @@ The Hystrix dashboard is as below with every @HystrixCommand being monitored and
 The OAuth 2.0 specification defines four grant flows to obtain an access token:
 ![alt text](https://github.com/tintinrevient/spring-cloud-netflix/blob/master/grant-flows.png)
 
-In the sample code, we uses Resource Owner Password Credentials and to obtain an access token, execute the cURL command below:
+In the sample code, we use Resource Owner Password Credentials to obtain an access token, which is written in the cURL data parameter: grant_type=password. Execute the cURL command below:
 
 ```
 user:~ admin$ curl client:secret@localhost:8080/oauth/token -d grant_type=password -d username=user -d password=user
@@ -40,7 +40,8 @@ user:~ admin$ curl client:secret@localhost:8080/oauth/token -d grant_type=passwo
     "scope": "read write"
 }
 ```
-With the access token, execute the cURL command below to request the protected resources:
+
+After we obtain the access token, execute the cURL command below to request the protected resources (https://stedolan.github.io/jq/ is installed to filter JSON):
 
 ```
 user:~ admin$ curl 'http://localhost:8080/product' -H 'Authorization: Bearer 28f86c86-3abf-451c-b167-45a942f9943d' | jq .
@@ -63,4 +64,5 @@ user:~ admin$ curl 'http://localhost:8080/product' -H 'Authorization: Bearer 28f
     }
 ]
 ```
+
 

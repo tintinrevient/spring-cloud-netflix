@@ -7,8 +7,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 
 @EnableCircuitBreaker
-@EnableEurekaClient
 @EnableFeignClients
+@EnableEurekaClient
 @SpringBootApplication
 public class DataServiceApplication {
 

@@ -65,4 +65,7 @@ user:~ admin$ curl 'http://localhost:8080/product' -H 'Authorization: Bearer 28f
 ]
 ```
 
+To test the OAuth API in Postman, check out below screen shot("Y2xpZW50OnNlY3JldA==" is encoded by Base64 from "client:secret"):
+![alt text](https://github.com/tintinrevient/spring-cloud-netflix/blob/master/postman-headers.png)
+![alt text](https://github.com/tintinrevient/spring-cloud-netflix/blob/master/postman-body.png)
 

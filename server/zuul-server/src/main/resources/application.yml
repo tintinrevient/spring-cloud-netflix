@@ -1,8 +1,9 @@
 zuul:
-#  ignoredServices: "*"
   routes:
-    data:
-      ServiceId: data-service
+    oauth:
+      ServiceId: oauth-service
+#    data:
+#      ServiceId: data-service
 
 server:
   address: localhost
